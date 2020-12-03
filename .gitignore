@@ -1,2 +1,5 @@
 /cloud2020.iml
 /cloud-provider-payment8001/cloud-provider-payment8001.iml
+/cloud-consumer-order80/target/
+/cloud-provider-payment8001/target/
+/cloud-api-commons/target/
