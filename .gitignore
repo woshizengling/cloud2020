@@ -3,3 +3,5 @@
 /cloud-consumer-order80/target/
 /cloud-provider-payment8001/target/
 /cloud-api-commons/target/
+/cloud-provider-payment8002/target/
+/*/target/

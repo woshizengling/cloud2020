@@ -13,4 +13,5 @@
     <select id="getPaymentById" parameterType="Long" resultMap="BaseResultMap">
         select id,serial from payment where id=#{id}
     </select>
+
 </mapper>
