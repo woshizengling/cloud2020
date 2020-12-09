@@ -33,6 +33,7 @@ public class PaymentHystrixMain8001 {
         registrationBean.setLoadOnStartup(1);
         registrationBean.addUrlMappings("/hystrix.stream");
         registrationBean.setName("HystrixMetricsStreamServlet");
+
         return  registrationBean;
     }
 
