@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author simpler
  * @program: cloud2020
  * @description:
- * @create 2020/12/09 23:05
+ * @create 2020/12/10 15:44
  */
 @RestController
 @RefreshScope       //curl -X POST "http://localhost:3355/actuator/refresh"
@@ -22,5 +22,4 @@ public class ConfigClientController {
     public String getConfigInfo() {
         return configInfo;
     }
-
 }

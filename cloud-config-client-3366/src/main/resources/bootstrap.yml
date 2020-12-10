@@ -1,21 +1,20 @@
 server:
-  port: 3344
+  port: 3366
+
 spring:
   application:
-    name: cloud-config-center
+    name: config-client3366
   cloud:
+    #config客户端配置
     config:
-      server:
-        git:
-          uri: https://github.com/woshizengling/springcloud-config.git  #github上面的git仓库名字
-          # 搜索目录
-          search-paths:
-            - springcloud-config
-          force-pull: true
-          username: 343094379@qq.com
-          password: zengling*921127
-      # 读取分支
-      label: master
+      label: master #分支名称
+      name: config  #配置文件名称
+      profile: dev  #读取后缀名称　　/master/config-dve.yml
+      uri: http://localhost:3344  #配置中心地址
+    bus:
+      refresh:
+        enabled: true
+
   # rabbitmq配置
   rabbitmq:
     host: localhost
@@ -33,11 +32,9 @@ eureka:
       # defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002:7002/eureka    #集群版
 
-
-
-#rabbitmq相关配置，暴露bus刷新配置的端点
+# 暴露监控端点
 management:
-  endpoints:  #暴露bus刷新配置的端点
+  endpoints:
     web:
       exposure:
-        include: 'bus-refresh'    #http://localhost:3344/actuator/bus-refresh"
+        include: "*"

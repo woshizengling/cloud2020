@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: config-client
+    name: config-client3355
   cloud:
     #config客户端配置
     config:
@@ -11,6 +11,16 @@ spring:
       name: config  #配置文件名称
       profile: dev  #读取后缀名称　　/master/config-dve.yml
       uri: http://localhost:3344  #配置中心地址
+  bus:
+    refresh:
+      enabled: true
+
+  # rabbitmq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 
 eureka:
   client:
@@ -21,3 +31,10 @@ eureka:
     service-url:
       # defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002:7002/eureka    #集群版
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
