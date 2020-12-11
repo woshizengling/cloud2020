@@ -41,3 +41,4 @@ management:
     web:
       exposure:
         include: 'bus-refresh'    #http://localhost:3344/actuator/bus-refresh"
+                                  #http://localhost:3344/actuator/bus-refresh/config-client3355:3355
