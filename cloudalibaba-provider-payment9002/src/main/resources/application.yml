@@ -14,7 +14,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.31.11:8860
+      #server-addr: localhost:8848
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
