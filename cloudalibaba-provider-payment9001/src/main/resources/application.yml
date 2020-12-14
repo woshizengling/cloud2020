@@ -14,7 +14,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.11:8860
+        server-addr: 192.168.230.1:8860
       #server-addr: localhost:8848
 
 mybatis:

@@ -7,12 +7,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.230.1:8860
       config:
-        server-addr: localhost:8848
+        server-addr: 192.168.230.1:8860
         file-extension: yaml  #指定yaml格式配置
-        namespace: 158d3634-a7d1-45d6-a1cb-290091bd945b
-        group: TEST_GROUP
+        namespace: 22d9ff94-ecc5-4c62-b6c3-9f0ee1dc7e9d
+        group: DEV_GROUP
 
 # ${prefix}-${spring.profiles.active}.${file-extension}
 # nacos-config-client-dev.yaml
